@@ -29,6 +29,7 @@ namespace TrenRezervasyon
         {
 
             services.AddControllers();
+            services.AddScoped<IRezervasyonService, RezervasyonService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TrenRezervasyon", Version = "v1" });
